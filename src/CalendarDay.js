@@ -218,14 +218,6 @@ class CalendarDay extends Component {
       }
     }
 
-    let responsiveDateContainerStyle = {
-      width: this.state.containerSize,
-      height: this.state.containerSize,
-      borderRadius: this.state.containerBorderRadius,
-      padding: this.state.containerPadding
-    };
-
-
     return (
       <TouchableOpacity
         onPress={this.props.onDateSelected.bind(this, this.props.date)}
@@ -234,7 +226,6 @@ class CalendarDay extends Component {
           key={this.props.date}
           style={[
             styles.dateContainer,
-            responsiveDateContainerStyle,
             dateViewStyle
           ]}
         >
